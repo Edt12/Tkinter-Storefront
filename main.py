@@ -1,5 +1,15 @@
 from tkinter import *
+bisque_Mug_amount = 0
+        
+Bisque_Santa_ornament_amount=0
 
+bisque_Elephant_monkey_box_amount = 0
+
+
+Bisque_Sitting_puppy_ornament_amount=0
+
+
+BiskqueStarfish_amount=0
 root = Tk()
 # creating title and window
 root.title("clay guild app")
@@ -24,21 +34,6 @@ def searchButtonClick():
 
         titleLabel = Label(top, text="Order and order history screen", font="64")
         titleLabel.place(x=550, y=0)
-        #creating amounts and declaring variables so they work inside other functions
-
-        bisque_Mug_amount = 0
-
-        Bisque_Santa_ornament_amount=0
-
-
-        bisque_Elephant_monkey_box_amount = 0
-
-
-
-        Bisque_Sitting_puppy_ornament_amount=0
-
-
-        BiskqueStarfish_amount=0
 
         #Creating Basket labels
         BisqueMug_order = Label(top, text=str(bisque_Mug_amount)+"xBisque Mug-£3.30", font=32)
@@ -58,24 +53,24 @@ def searchButtonClick():
 
         def BisqueMug_click():
             global bisque_Mug_amount
-            bisque_Mug_amount = 0
             bisque_Mug_amount += 1
+            BisqueMug_order.config(text=str(bisque_Mug_amount)+"xBisque Mug-£3.30")
+
 
         def Bisque_Santa_ornament_click():
             global Bisque_Santa_ornament_amount
-            Bisque_Santa_ornament_amount = 0
             Bisque_Santa_ornament_amount += 1
+            Bisque_Santa_ornament_order.config(text=str(Bisque_Santa_ornament_amount)+"xBisque santa ornament-£1.68")
 
         def bisque_Elephant_monkey_box_click():
             global bisque_Elephant_monkey_box_amount
-            bisque_Elephant_monkey_box_amount = 0
             bisque_Elephant_monkey_box_amount += 1
-
+            Bisque_Elephant_monkey_box_order.config(text=str(bisque_Elephant_monkey_box_amount)+"xBisque elephant money box-£6.96")
+        
         def Bisque_Sitting_puppy_ornament_click():
             global Bisque_Sitting_puppy_ornament_amount
-            Bisque_Sitting_puppy_ornament_amount = 0
             Bisque_Sitting_puppy_ornament_amount += 1
-
+            Bisque_Sitting_puppy_ornament.config(text=str(Bisque_Sitting_puppy_ornament_amount)+"xBisque sitting puppy ornament-£2.40")
 
         def BisqueStarfish_click():
             global BiskqueStarfish_amount
@@ -94,7 +89,7 @@ def searchButtonClick():
 
         biskque_Sitting_puppy_ornament = Button(top, text="Bisque sitting puppy ornament-£2.40 plus VAT-PT21444 ",command=Bisque_Sitting_puppy_ornament_click)
         biskque_Sitting_puppy_ornament.place(x=100, y=300)
-
+  
         biskqueStarfish = Button(top, text="Bisque starfish-£4.96 plus VAT-PT37485 ", command=BisqueStarfish_click)
         biskqueStarfish.place(x=100, y=350)
 
